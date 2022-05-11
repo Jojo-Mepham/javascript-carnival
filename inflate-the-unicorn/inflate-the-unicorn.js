@@ -15,7 +15,7 @@ let unicornClicked = (u) => {
   } else if (newUnicorn.src.match('./images/unicorn-2.png')) {
     newUnicorn.src = './images/unicorn-3.png'
   } else if (newUnicorn.src.match('./images/unicorn-3.png')) {
-    alert(`${u.target.id} Say's Thank You!`)
+    alert(`${u.target.id} Says Thank You!`)
   }
 }
 
