@@ -3,10 +3,9 @@
 // -    -   -   -   -  //
 
 console.log('Inflate The Unicorn!')
+
 let unicorns = document.getElementsByClassName('inflate-an-image')
-let unicorn = ''
-let bicorn = ''
-let tricorn = ''
+
 let unicornClicked = (u) => {
   let newUnicorn = u.target
   if (newUnicorn.src.match('./images/unicorn-0.png')) {
@@ -15,9 +14,8 @@ let unicornClicked = (u) => {
     newUnicorn.src = './images/unicorn-2.png'
   } else if (newUnicorn.src.match('./images/unicorn-2.png')) {
     newUnicorn.src = './images/unicorn-3.png'
-  }
-  if (newUnicorn.src.match('./images/unicorn-3.png')) {
-    alert(`${unicorn}Say's Thank You!`)
+  } else if (newUnicorn.src.match('./images/unicorn-3.png')) {
+    alert(`${u.target.id} Say's Thank You!`)
   }
 }
 
