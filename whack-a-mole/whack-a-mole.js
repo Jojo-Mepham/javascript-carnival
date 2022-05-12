@@ -3,7 +3,21 @@
 // -    -   -   -   -  //
 
 console.log('Whack-a-Mole!')
-let moleTable = document.getElementsByTagName('TD') // get table array
-let moleTableArr = Array.from(moleTable) // turn table into js array so I can access index
-let randomMole = moleTableArr[Math.floor(Math.random() * moleTableArr.length)] // generate random index selector from array
-console.log(randomMole)
+let moleTable = document.getElementsByTagName('TD')
+let moleTableArr = Array.from(moleTable)
+let randomMoleArr = [Math.floor(Math.random() * moleTableArr.length)]
+
+// for (i = 0; i < moleTableArr.length; i++) {
+//   moleTableArr[i] = randomMoleArr
+// }
+
+let moleImage = document.createElement('IMG')
+moleImage.src = 'mole.png'
+moleImage.classList.add('mole')
+moleElement = document
+  .getElementsByTagName('TD')
+  [randomMoleArr].appendChild(moleImage)
+
+let moleWhacked = () => {}
+console.log(moleImage)
+console.log(randomMoleArr)
