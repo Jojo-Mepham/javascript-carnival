@@ -16,5 +16,8 @@ let whackMole = () => {
   randomMoleArr = [Math.floor(Math.random() * moleTableArr.length)]
   randomMole = moleTable[randomMoleArr]
   randomMole.appendChild(moleImage)
+  let whackSound = document.createElement('audio')
+  whackSound.src = 'whack-audio.wav'
+  whackSound.play()
 }
 moleImage.onclick = whackMole //onclick functions
