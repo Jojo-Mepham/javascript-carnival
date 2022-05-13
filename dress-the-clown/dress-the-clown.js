@@ -3,5 +3,8 @@
 // -    -   -   -   -  //
 
 console.log('Dress The Clown!')
-let clownHead = document.getElementById('head')
-console.log(clownHead)
+let changeClownHead = () => {
+  let clownHead = document.getElementById('head')
+  return (clownHead.src = './images/head1.png')
+}
+console.log(changeClownHead(clownHead))
