@@ -6,36 +6,39 @@ console.log('Dress The Clown!')
 
 let clownHead = document.getElementById('head')
 let clownHeadFileName = './images/head'
-let clownHeadIndex = 3
+let clownHeadIndex = 0
 let clownHeadFileType = '.png'
 
 let changeClownHead = () => {
+  let clownHead = document.getElementById('head')
   let clownHeadSrc = clownHeadFileName.concat(
     '',
     clownHeadIndex,
     '',
     clownHeadFileType
   )
-  return clownHeadSrc
-}
-let increaseClownHeadIndex = () => {
-  if (clownHeadIndex <= 0) {
-    clownHeadIndex = 1
-  } else if (clownHeadIndex <= 1) {
-    clownHeadIndex = 2
-  } else if (clownHeadIndex <= 2) {
-    clownHeadIndex = 3
-  } else if (clownHeadIndex <= 3) {
-    clownHeadIndex = 4
-  } else if (clownHeadIndex <= 4) {
-    clownHeadIndex = 5
-  } else {
-    clownHeadIndex = 0
-  }
-  return clownHeadIndex
+  clownHead.src = clownHeadSrc
 }
 
-console.log(changeClownHead())
-console.log(clownHead)
-console.log(clownHeadIndex)
-console.log(increaseClownHeadIndex())
+window.addEventListener('keydown', function (event) {
+  let key = event.code
+  switch (event.code) {
+    case 'ArrowRight':
+      console.log('pressing right arrow')
+      changeClownHead()
+      if (clownHeadIndex === 5) {
+        clownHeadIndex = 0
+      } else {
+        clownHeadIndex++
+      }
+      break
+    case 'ArrowLeft':
+      console.log('pressing left arrow')
+      changeClownHead()
+      if (clownHeadIndex === 0) {
+        clownHeadIndex = 5
+      } else {
+        clownHeadIndex--
+      }
+  }
+})
