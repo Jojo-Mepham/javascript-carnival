@@ -3,8 +3,20 @@
 // -    -   -   -   -  //
 
 console.log('Dress The Clown!')
+
+let clownHead = document.getElementById('head')
+let clownHeadFileName = './images/head'
+let clownHeadIndex = 0
+let clownHeadFileType = '.png'
 let changeClownHead = () => {
-  let clownHead = document.getElementById('head')
-  return (clownHead.src = './images/head1.png')
+  let clownHeadSrc = clownHeadFileName.concat(
+    '',
+    clownHeadIndex,
+    '',
+    clownHeadFileType
+  )
+  return clownHeadSrc
 }
-console.log(changeClownHead(clownHead))
+
+console.log(changeClownHead())
+console.log(clownHead)
